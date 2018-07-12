@@ -1,8 +1,6 @@
 ## About
 
-This repository contains the [fastai](http://www.fast.ai) [DAWNbench](https://dawn.cs.stanford.edu/benchmark/#cifar10-train-time) result adapted to training on 1080ti. It is missing many of the optimizations that allowed the fastai team to achieve 94% accuracy in 2m 54s (no fp16, no data prefetching, etc) on an AWS p3.16xlarge instance with 8 V100 GPUs. On my box with a single 1080ti I am able to train to 94% accuracy (with TTA) in 13 minutes 30 seconds.
-
-The second notebook adapts recent work by fastai and trains with AdamW and the 1 cycle policy cutting down the number of required epochs to 18. You can read more about this approach on the [fastai blog](http://www.fast.ai/2018/07/02/adam-weight-decay/) or in the [official repositiory](https://github.com/sgugger/Adam-experiments).
+This branch contains a notebook for training on CIFAR10 using Tensorflow and the 1cycle policy. The training is very bare bones and there are ample opportunities to further improve on the result (as noted in the notebook). Nonetheless, this still achieves over 92% accuracy in ~20 epochs.
 
 You will need to have [docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) and [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) installed in order to run this.
 
