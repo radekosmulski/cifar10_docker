@@ -8,6 +8,8 @@ You will need to have [docker](https://docs.docker.com/install/linux/docker-ce/u
 
 Once you start the docker container, all you have to do is access https://localhost:8888 and enter `jupyter` as password. Open the notebook and hit run all.
 
+For Tensorflow code please checkout the [tensorflow branch](https://github.com/radekosmulski/cifar10_docker/tree/tensorflow). The implementation there is very minimal but still might be useful as a starting point for experimenting.
+
 ## Instructions for building and running the container
 1. cd into cloned repo
 2. `docker build -t cifar .`
